@@ -56,21 +56,21 @@
 <body>
   <div class="overlay"></div>
 
-  <div class="container" id="step1">
+  <div class="container hidden" id="step1">
+    <h2>সর্বোচ্চ গতিসীমা 🍌</h2>
+    <button onclick="nextStep('male')">৬০🥵</button>
+    <button onclick="nextStep('female')">৪০🙂</button>
+  </div>
+
+  <div class="container" id="step2">
     <h2>আপনার লিঙ্গ নির্বাচন করুন</h2>
     <button onclick="nextStep('male')">পুরুষ</button>
     <button onclick="nextStep('female')">মহিলা</button>
   </div>
 
-  <div class="container hidden" id="step2">
+  <div class="container hidden" id="step3">
     <h2>আপনি কি ১৮+?</h2>
     <button onclick="nextStep2()">হ্যাঁ</button>
-  </div>
-
-  <div class="container hidden" id="step3">
-    <h2>সর্বোচ্চ গতিসীমা 🍌</h2>
-    <button onclick="nextStep('male')">৬০🥵</button>
-    <button onclick="nextStep('female')">৪০🙂</button>
   </div>
 
   <div class="container hidden" id="step4">
