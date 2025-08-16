@@ -10,31 +10,193 @@
       background: #181818;
       font-family: 'Segoe UI', Arial, sans-serif;
     }
+    .banner-wrapper {
+      position: relative;
+      width: 100vw;
+      min-height: 340px;
+      overflow: hidden;
+      background: #181818;
+    }
     .voucher-bg {
       width: 100%;
       height: 340px;
       object-fit: cover;
       display: block;
-      position: relative;
-      filter: brightness(1.1) saturate(1.12);
+      filter: brightness(1.09) saturate(1.13);
     }
-    .logo-container {
+    .banner-header {
       position: absolute;
-      left: 34px;
-      top: 42px;
-      z-index: 2;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding: 24px 0 0 0;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: space-between;
+      z-index: 2;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-left: 26px;
     }
     .logo-crown {
-      font-size: 2.5rem;
+      font-size: 1.6rem;
       color: gold;
       font-weight: bold;
     }
     .logo-text {
-      font-size: 2.6rem;
+      font-size: 1.5rem;
       font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 7px rgba(0,0,0,0.18);
+    }
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 24px;
+    }
+    .icon {
+      font-size: 1.05rem;
+      color: #fff;
+      background: rgba(0,0,0,0.22);
+      padding: 5px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+    }
+    .lang {
+      font-size: 0.92rem;
+      color: #fff;
+      font-weight: 600;
+      margin: 0 2px;
+      letter-spacing: 1px;
+    }
+    /* Voucher card */
+    .voucher-card {
+      background: #fff;
+      max-width: 420px;
+      margin: -60px auto 36px auto;
+      border-radius: 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.19);
+      padding: 48px 28px 36px 28px;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Only slightly overlapping banner for best visual balance */
+      top: 0;
+    }
+    .voucher-title {
+      font-size: 1.85rem;
+      font-weight: bold;
+      margin-bottom: 13px;
+      color: #222;
+    }
+    .voucher-deal {
+      color: #e53935;
+      font-size: 1.35rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .voucher-desc {
+      font-size: 1.18rem;
+      color: #444;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .voucher-btn {
+      background: linear-gradient(to right, #fbc02d, #ffe082);
+      color: #242424;
+      font-weight: bold;
+      font-size: 1.27rem;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(250, 192, 45, 0.09);
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      margin-bottom: 19px;
+      display: inline-block;
+    }
+    .voucher-btn:hover {
+      background: linear-gradient(to right, #ffe082, #fbc02d);
+      color: #e53935;
+    }
+    .voucher-note {
+      font-size: 1rem;
+      color: #e53935;
+      margin-top: 8px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .banner-wrapper {
+        min-height: 150px;
+      }
+      .voucher-bg {
+        height: 150px;
+      }
+      .voucher-card {
+        padding: 16px 7px 18px 7px;
+        margin: -20px auto 20px auto;
+      }
+      .logo-container {
+        margin-left: 8px;
+      }
+      .header-icons {
+        margin-right: 8px;
+      }
+      .logo-crown {
+        font-size: 1rem;
+      }
+      .logo-text {
+        font-size: 0.95rem;
+      }
+      .icon {
+        font-size: 0.8rem;
+        padding: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-wrapper">
+    <img class="voucher-bg" src="https://i.postimg.cc/fTWYx8RY/IMG-20250816-115801.jpg" alt="Voucher Banner">
+    <div class="banner-header">
+      <div class="logo-container">
+        <span class="logo-crown">&#x1F451;</span>
+        <span class="logo-text">faphouse</span>
+      </div>
+      <div class="header-icons">
+        <span class="icon">&#x1F310;</span>
+        <span class="lang">EN</span>
+        <span class="icon">&#x25BC;</span>
+        <span class="icon">&#x21E8;</span>
+      </div>
+    </div>
+  </div>
+  <div class="voucher-card">
+    <div class="voucher-title">Get FREE Membership</div>
+    <div class="voucher-deal">100% OFF - 1 Month</div>
+    <div class="voucher-desc">
+      Use this voucher to claim <b>1 Month FREE Membership</b> at faphouse.<br>
+      Click the button below and enjoy all premium features for a month!
+    </div>
+    <a class="voucher-btn" href="https://faphouse1.com/join#amVzPWhlYWRlcg==" target="_blank">
+      Claim 1 Month Free
+    </a>
+    <div class="voucher-note">
+      * Limited time offer. Only valid for new users.
+    </div>
+  </div>
+</body>
+</html>      font-weight: bold;
       color: #fff;
       letter-spacing: 1px;
       text-shadow: 0 2px 7px rgba(0,0,0,0.18);
